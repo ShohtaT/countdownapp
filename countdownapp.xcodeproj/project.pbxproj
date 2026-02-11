@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F0FCD53C2F3CE48100CFBEFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FCD5242F3CE47F00CFBEFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FCD52B2F3CE47F00CFBEFB;
+			remoteInfo = countdownapp;
+		};
+		F0FCD5462F3CE48100CFBEFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FCD5242F3CE47F00CFBEFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FCD52B2F3CE47F00CFBEFB;
+			remoteInfo = countdownapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0FCD52C2F3CE47F00CFBEFB /* countdownapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = countdownapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FCD53B2F3CE48100CFBEFB /* countdownappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = countdownappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FCD5452F3CE48100CFBEFB /* countdownappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = countdownappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F0FCD52E2F3CE47F00CFBEFB /* countdownapp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = countdownapp;
+			sourceTree = "<group>";
+		};
+		F0FCD53E2F3CE48100CFBEFB /* countdownappTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = countdownappTests;
+			sourceTree = "<group>";
+		};
+		F0FCD5482F3CE48100CFBEFB /* countdownappUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = countdownappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0FCD5292F3CE47F00CFBEFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5382F3CE48100CFBEFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5422F3CE48100CFBEFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0FCD5232F3CE47F00CFBEFB = {
+			isa = PBXGroup;
+			children = (
+				F0FCD52E2F3CE47F00CFBEFB /* countdownapp */,
+				F0FCD53E2F3CE48100CFBEFB /* countdownappTests */,
+				F0FCD5482F3CE48100CFBEFB /* countdownappUITests */,
+				F0FCD52D2F3CE47F00CFBEFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0FCD52D2F3CE47F00CFBEFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCD52C2F3CE47F00CFBEFB /* countdownapp.app */,
+				F0FCD53B2F3CE48100CFBEFB /* countdownappTests.xctest */,
+				F0FCD5452F3CE48100CFBEFB /* countdownappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0FCD52B2F3CE47F00CFBEFB /* countdownapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCD54F2F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownapp" */;
+			buildPhases = (
+				F0FCD5282F3CE47F00CFBEFB /* Sources */,
+				F0FCD5292F3CE47F00CFBEFB /* Frameworks */,
+				F0FCD52A2F3CE47F00CFBEFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F0FCD52E2F3CE47F00CFBEFB /* countdownapp */,
+			);
+			name = countdownapp;
+			packageProductDependencies = (
+			);
+			productName = countdownapp;
+			productReference = F0FCD52C2F3CE47F00CFBEFB /* countdownapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0FCD53A2F3CE48100CFBEFB /* countdownappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCD5522F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownappTests" */;
+			buildPhases = (
+				F0FCD5372F3CE48100CFBEFB /* Sources */,
+				F0FCD5382F3CE48100CFBEFB /* Frameworks */,
+				F0FCD5392F3CE48100CFBEFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0FCD53D2F3CE48100CFBEFB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F0FCD53E2F3CE48100CFBEFB /* countdownappTests */,
+			);
+			name = countdownappTests;
+			packageProductDependencies = (
+			);
+			productName = countdownappTests;
+			productReference = F0FCD53B2F3CE48100CFBEFB /* countdownappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0FCD5442F3CE48100CFBEFB /* countdownappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCD5552F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownappUITests" */;
+			buildPhases = (
+				F0FCD5412F3CE48100CFBEFB /* Sources */,
+				F0FCD5422F3CE48100CFBEFB /* Frameworks */,
+				F0FCD5432F3CE48100CFBEFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0FCD5472F3CE48100CFBEFB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F0FCD5482F3CE48100CFBEFB /* countdownappUITests */,
+			);
+			name = countdownappUITests;
+			packageProductDependencies = (
+			);
+			productName = countdownappUITests;
+			productReference = F0FCD5452F3CE48100CFBEFB /* countdownappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0FCD5242F3CE47F00CFBEFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					F0FCD52B2F3CE47F00CFBEFB = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					F0FCD53A2F3CE48100CFBEFB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F0FCD52B2F3CE47F00CFBEFB;
+					};
+					F0FCD5442F3CE48100CFBEFB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F0FCD52B2F3CE47F00CFBEFB;
+					};
+				};
+			};
+			buildConfigurationList = F0FCD5272F3CE47F00CFBEFB /* Build configuration list for PBXProject "countdownapp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0FCD5232F3CE47F00CFBEFB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F0FCD52D2F3CE47F00CFBEFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0FCD52B2F3CE47F00CFBEFB /* countdownapp */,
+				F0FCD53A2F3CE48100CFBEFB /* countdownappTests */,
+				F0FCD5442F3CE48100CFBEFB /* countdownappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0FCD52A2F3CE47F00CFBEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5392F3CE48100CFBEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5432F3CE48100CFBEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0FCD5282F3CE47F00CFBEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5372F3CE48100CFBEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCD5412F3CE48100CFBEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0FCD53D2F3CE48100CFBEFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FCD52B2F3CE47F00CFBEFB /* countdownapp */;
+			targetProxy = F0FCD53C2F3CE48100CFBEFB /* PBXContainerItemProxy */;
+		};
+		F0FCD5472F3CE48100CFBEFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FCD52B2F3CE47F00CFBEFB /* countdownapp */;
+			targetProxy = F0FCD5462F3CE48100CFBEFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F0FCD54D2F3CE48100CFBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0FCD54E2F3CE48100CFBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0FCD5502F3CE48100CFBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0FCD5512F3CE48100CFBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0FCD5532F3CE48100CFBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/countdownapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/countdownapp";
+			};
+			name = Debug;
+		};
+		F0FCD5542F3CE48100CFBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/countdownapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/countdownapp";
+			};
+			name = Release;
+		};
+		F0FCD5562F3CE48100CFBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = countdownapp;
+			};
+			name = Debug;
+		};
+		F0FCD5572F3CE48100CFBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZNXA8T5DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shotatak.countdownappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = countdownapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0FCD5272F3CE47F00CFBEFB /* Build configuration list for PBXProject "countdownapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCD54D2F3CE48100CFBEFB /* Debug */,
+				F0FCD54E2F3CE48100CFBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FCD54F2F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCD5502F3CE48100CFBEFB /* Debug */,
+				F0FCD5512F3CE48100CFBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FCD5522F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCD5532F3CE48100CFBEFB /* Debug */,
+				F0FCD5542F3CE48100CFBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FCD5552F3CE48100CFBEFB /* Build configuration list for PBXNativeTarget "countdownappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCD5562F3CE48100CFBEFB /* Debug */,
+				F0FCD5572F3CE48100CFBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0FCD5242F3CE47F00CFBEFB /* Project object */;
+}
