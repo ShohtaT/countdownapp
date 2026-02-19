@@ -38,6 +38,6 @@ struct CountdownTimerView: View {
         .frame(minWidth: 60)
         .padding(.vertical, 12)
         .padding(.horizontal, 8)
-        .glassEffect(.regular)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
     }
 }

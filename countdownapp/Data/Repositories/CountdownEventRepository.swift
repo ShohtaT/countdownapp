@@ -23,7 +23,8 @@ final class CountdownEventRepository: CountdownEventRepositoryProtocol {
     }
 
     func update(_ event: CountdownEvent) throws {
-        let predicate = #Predicate<CountdownEventModel> { $0.id == event.id }
+        let eventId = event.id
+        let predicate = #Predicate<CountdownEventModel> { $0.id == eventId }
         let descriptor = FetchDescriptor(predicate: predicate)
         guard let model = try modelContext.fetch(descriptor).first else { return }
         CountdownEventMapper.update(model, from: event)
@@ -31,7 +32,8 @@ final class CountdownEventRepository: CountdownEventRepositoryProtocol {
     }
 
     func delete(id: UUID) throws {
-        let predicate = #Predicate<CountdownEventModel> { $0.id == id }
+        let targetId = id
+        let predicate = #Predicate<CountdownEventModel> { $0.id == targetId }
         let descriptor = FetchDescriptor(predicate: predicate)
         guard let model = try modelContext.fetch(descriptor).first else { return }
         modelContext.delete(model)

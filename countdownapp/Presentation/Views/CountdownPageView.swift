@@ -44,7 +44,6 @@ struct CountdownPageView: View {
                     } label: {
                         Image(systemName: "list.bullet")
                     }
-                    .glassEffect(.regular.interactive())
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -55,7 +54,6 @@ struct CountdownPageView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-                    .glassEffect(.regular.interactive())
                 }
             }
             .sheet(isPresented: $viewModel.showingAddSheet) {

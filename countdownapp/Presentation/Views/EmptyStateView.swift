@@ -27,7 +27,6 @@ struct EmptyStateView: View {
                     .padding(.vertical, 12)
             }
             .buttonStyle(.borderedProminent)
-            .glassEffect(.regular.interactive())
         }
         .padding()
     }

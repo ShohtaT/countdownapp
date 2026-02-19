@@ -35,21 +35,19 @@ struct CountdownCardView: View {
             Spacer()
 
             HStack(spacing: 16) {
-                GlassEffectContainer(.regular) {
-                    Button(action: onEdit) {
-                        Image(systemName: "pencil")
-                            .font(.title3)
-                            .frame(width: 44, height: 44)
-                    }
-                    .glassEffect(.regular.interactive())
-
-                    Button(role: .destructive, action: onDelete) {
-                        Image(systemName: "trash")
-                            .font(.title3)
-                            .frame(width: 44, height: 44)
-                    }
-                    .glassEffect(.regular.interactive())
+                Button(action: onEdit) {
+                    Image(systemName: "pencil")
+                        .font(.title3)
+                        .frame(width: 44, height: 44)
                 }
+                .buttonStyle(.bordered)
+
+                Button(role: .destructive, action: onDelete) {
+                    Image(systemName: "trash")
+                        .font(.title3)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.bordered)
             }
             .padding(.bottom, 40)
         }
