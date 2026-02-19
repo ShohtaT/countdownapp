@@ -1,10 +1,3 @@
-//
-//  countdownappApp.swift
-//  countdownapp
-//
-//  Created by Takahashi Shohta on 2/12/26.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,7 +5,7 @@ import SwiftData
 struct countdownappApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            CountdownEventModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

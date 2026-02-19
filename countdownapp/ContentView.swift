@@ -1,61 +1,28 @@
-//
-//  ContentView.swift
-//  countdownapp
-//
-//  Created by Takahashi Shohta on 2/12/26.
-//
-
 import SwiftUI
 import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
+        let repository = CountdownEventRepository(modelContext: modelContext)
+        let fetchUseCase = FetchEventsUseCase(repository: repository)
+        let addUseCase = AddEventUseCase(repository: repository)
+        let updateUseCase = UpdateEventUseCase(repository: repository)
+        let deleteUseCase = DeleteEventUseCase(repository: repository)
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+        let viewModel = CountdownPageViewModel(
+            fetchEventsUseCase: fetchUseCase,
+            addEventUseCase: addUseCase,
+            updateEventUseCase: updateUseCase,
+            deleteEventUseCase: deleteUseCase
+        )
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        CountdownPageView(viewModel: viewModel)
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: CountdownEventModel.self, inMemory: true)
 }
