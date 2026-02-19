@@ -1,6 +1,6 @@
 import Foundation
 
-struct CountdownEvent: Identifiable, Equatable {
+struct CountdownEvent: Identifiable, Equatable, Hashable {
     let id: UUID
     var title: String
     var targetDate: Date

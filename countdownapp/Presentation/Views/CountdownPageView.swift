@@ -20,10 +20,14 @@ struct CountdownPageView: View {
                             CountdownCardView(
                                 event: event,
                                 now: viewModel.now,
+                                pinnedMemo: viewModel.latestMemos[event.id],
                                 onEdit: {
                                     formViewModel.configureForEdit(event)
                                     viewModel.editingEvent = event
                                     viewModel.showingAddSheet = true
+                                },
+                                onMemo: {
+                                    viewModel.selectedMemoEvent = event
                                 },
                                 onDelete: {
                                     withAnimation {
@@ -66,6 +70,14 @@ struct CountdownPageView: View {
                         viewModel.updateEvent(event)
                     }
                 )
+            }
+            .navigationDestination(item: $viewModel.selectedMemoEvent) { event in
+                if let factory = viewModel.memoViewModelFactory {
+                    CorkBoardView(viewModel: factory(event))
+                        .onDisappear {
+                            viewModel.loadLatestMemos()
+                        }
+                }
             }
             .sheet(isPresented: $viewModel.showingEventList) {
                 EventListView(viewModel: viewModel) { event in

@@ -7,6 +7,7 @@ final class CountdownPageViewModel {
     private let addEventUseCase: AddEventUseCase
     private let updateEventUseCase: UpdateEventUseCase
     private let deleteEventUseCase: DeleteEventUseCase
+    private let fetchMemosUseCase: FetchMemosUseCase?
 
     var events: [CountdownEvent] = []
     var now: Date = Date()
@@ -14,6 +15,10 @@ final class CountdownPageViewModel {
     var showingAddSheet = false
     var showingEventList = false
     var editingEvent: CountdownEvent?
+    var selectedMemoEvent: CountdownEvent?
+    var latestMemos: [UUID: Memo] = [:]
+
+    var memoViewModelFactory: ((CountdownEvent) -> CorkBoardViewModel)?
 
     private var timer: Timer?
 
@@ -29,12 +34,16 @@ final class CountdownPageViewModel {
         fetchEventsUseCase: FetchEventsUseCase,
         addEventUseCase: AddEventUseCase,
         updateEventUseCase: UpdateEventUseCase,
-        deleteEventUseCase: DeleteEventUseCase
+        deleteEventUseCase: DeleteEventUseCase,
+        fetchMemosUseCase: FetchMemosUseCase? = nil,
+        memoViewModelFactory: ((CountdownEvent) -> CorkBoardViewModel)? = nil
     ) {
         self.fetchEventsUseCase = fetchEventsUseCase
         self.addEventUseCase = addEventUseCase
         self.updateEventUseCase = updateEventUseCase
         self.deleteEventUseCase = deleteEventUseCase
+        self.fetchMemosUseCase = fetchMemosUseCase
+        self.memoViewModelFactory = memoViewModelFactory
     }
 
     func startTimer() {
@@ -52,9 +61,21 @@ final class CountdownPageViewModel {
         do {
             events = try fetchEventsUseCase.execute()
             clampPageIndex()
+            loadLatestMemos()
         } catch {
             print("Failed to load events: \(error)")
         }
+    }
+
+    func loadLatestMemos() {
+        guard let fetchMemosUseCase else { return }
+        var result: [UUID: Memo] = [:]
+        for event in events {
+            if let first = try? fetchMemosUseCase.execute(eventId: event.id).first {
+                result[event.id] = first
+            }
+        }
+        latestMemos = result
     }
 
     func addEvent(title: String, targetDate: Date, color: EventColor) {

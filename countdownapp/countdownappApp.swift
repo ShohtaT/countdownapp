@@ -6,6 +6,7 @@ struct countdownappApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             CountdownEventModel.self,
+            MemoModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

@@ -10,6 +10,9 @@ final class CountdownEventModel {
     var createdAt: Date
     var displayOrder: Int
 
+    @Relationship(deleteRule: .cascade, inverse: \MemoModel.event)
+    var memos: [MemoModel] = []
+
     init(
         id: UUID = UUID(),
         title: String,

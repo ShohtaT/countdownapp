@@ -11,11 +11,25 @@ struct ContentView: View {
         let updateUseCase = UpdateEventUseCase(repository: repository)
         let deleteUseCase = DeleteEventUseCase(repository: repository)
 
+        let memoRepository = MemoRepository(modelContext: modelContext)
+        let fetchMemosUseCase = FetchMemosUseCase(repository: memoRepository)
+        let addMemoUseCase = AddMemoUseCase(repository: memoRepository)
+        let deleteMemoUseCase = DeleteMemoUseCase(repository: memoRepository)
+
         let viewModel = CountdownPageViewModel(
             fetchEventsUseCase: fetchUseCase,
             addEventUseCase: addUseCase,
             updateEventUseCase: updateUseCase,
-            deleteEventUseCase: deleteUseCase
+            deleteEventUseCase: deleteUseCase,
+            fetchMemosUseCase: fetchMemosUseCase,
+            memoViewModelFactory: { event in
+                CorkBoardViewModel(
+                    event: event,
+                    fetchMemosUseCase: fetchMemosUseCase,
+                    addMemoUseCase: addMemoUseCase,
+                    deleteMemoUseCase: deleteMemoUseCase
+                )
+            }
         )
 
         CountdownPageView(viewModel: viewModel)
