@@ -1,7 +1,6 @@
 # Countdown App
 
-iOS 26 の Liquid Glass デザインに対応したカウントダウンアプリ。
-SwiftUI + SwiftData をベースに、クリーンアーキテクチャ + DDD で構築。
+SwiftUI + SwiftData をベースに、クリーンアーキテクチャ + DDD で構築したカウントダウンアプリ。
 
 ## 機能
 
@@ -10,12 +9,11 @@ SwiftUI + SwiftData をベースに、クリーンアーキテクチャ + DDD �
 - イベントの追加・編集・削除
 - 8色のプリセットカラーから選択
 - 一覧画面で「アクティブ」「期限切れ」をセクション分離表示
-- Liquid Glass エフェクトによるモダンな UI
 
 ## 必要環境
 
-- Xcode 26 Beta 以降
-- iOS 26.0 以降
+- Xcode 16.4 以降
+- iOS 18.0 以降
 
 ## アーキテクチャ
 
@@ -55,7 +53,7 @@ countdownapp/
 |------|------|
 | CountdownPageView | メイン画面。スワイプでイベント切り替え |
 | CountdownCardView | 1 イベント分のフルスクリーンカード |
-| CountdownTimerView | 時:分:秒の Glass パネル表示 |
+| CountdownTimerView | 日・時間・分・秒のタイマーパネル表示 |
 | EventFormSheet | イベント追加・編集シート |
 | EventListView | 一覧（アクティブ / 期限切れセクション） |
 | EmptyStateView | イベント未登録時の案内 |
