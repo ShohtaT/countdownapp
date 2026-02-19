@@ -38,7 +38,17 @@ struct CountdownPageView: View {
                             .tag(index)
                         }
                     }
-                    .tabViewStyle(.page(indexDisplayMode: .automatic))
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+
+                    HStack(spacing: 8) {
+                        ForEach(0..<viewModel.activeEvents.count, id: \.self) { index in
+                            Circle()
+                                .fill(index == viewModel.currentPageIndex ? Color.primary : Color.primary.opacity(0.3))
+                                .frame(width: 8, height: 8)
+                        }
+                    }
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                    .padding(.bottom, 16)
                 }
             }
             .toolbar {
