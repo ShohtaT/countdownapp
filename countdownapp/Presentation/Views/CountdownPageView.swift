@@ -27,7 +27,7 @@ struct CountdownPageView: View {
                                     viewModel.showingAddSheet = true
                                 },
                                 onMemo: {
-                                    viewModel.selectedMemoEvent = event
+                                    viewModel.startEditingMemo(event: event)
                                 },
                                 onDelete: {
                                     withAnimation {
@@ -71,13 +71,17 @@ struct CountdownPageView: View {
                     }
                 )
             }
-            .navigationDestination(item: $viewModel.selectedMemoEvent) { event in
-                if let factory = viewModel.memoViewModelFactory {
-                    CorkBoardView(viewModel: factory(event))
-                        .onDisappear {
-                            viewModel.loadLatestMemos()
-                        }
-                }
+            .sheet(item: $viewModel.editingMemoEvent) { event in
+                MemoEditSheet(
+                    event: event,
+                    initialText: viewModel.latestMemos[event.id]?.body ?? CountdownCardView.defaultMessage(for: event),
+                    onSave: { text in
+                        viewModel.saveMemo(body: text)
+                    },
+                    onCancel: {
+                        viewModel.editingMemoEvent = nil
+                    }
+                )
             }
             .sheet(isPresented: $viewModel.showingEventList) {
                 EventListView(viewModel: viewModel) { event in
@@ -106,5 +110,53 @@ struct CountdownPageView: View {
             endPoint: .bottom
         )
         .ignoresSafeArea()
+    }
+}
+
+private struct MemoEditSheet: View {
+    let event: CountdownEvent
+    let initialText: String
+    let onSave: (String) -> Void
+    let onCancel: () -> Void
+
+    @State private var text: String = ""
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 16) {
+                Text(event.title)
+                    .font(.headline)
+                    .padding(.top)
+
+                TextEditor(text: $text)
+                    .frame(minHeight: 150)
+                    .padding(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.secondary.opacity(0.3))
+                    )
+                    .padding(.horizontal)
+
+                Spacer()
+            }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("キャンセル") {
+                        onCancel()
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        onSave(text)
+                    }
+                }
+            }
+            .navigationTitle("メモ編集")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .presentationDetents([.medium])
+        .onAppear {
+            text = initialText
+        }
     }
 }

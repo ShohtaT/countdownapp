@@ -8,6 +8,7 @@ final class CountdownPageViewModel {
     private let updateEventUseCase: UpdateEventUseCase
     private let deleteEventUseCase: DeleteEventUseCase
     private let fetchMemosUseCase: FetchMemosUseCase?
+    private let saveMemoUseCase: SaveMemoUseCase?
 
     var events: [CountdownEvent] = []
     var now: Date = Date()
@@ -15,10 +16,8 @@ final class CountdownPageViewModel {
     var showingAddSheet = false
     var showingEventList = false
     var editingEvent: CountdownEvent?
-    var selectedMemoEvent: CountdownEvent?
+    var editingMemoEvent: CountdownEvent?
     var latestMemos: [UUID: Memo] = [:]
-
-    var memoViewModelFactory: ((CountdownEvent) -> CorkBoardViewModel)?
 
     private var timer: Timer?
 
@@ -36,14 +35,14 @@ final class CountdownPageViewModel {
         updateEventUseCase: UpdateEventUseCase,
         deleteEventUseCase: DeleteEventUseCase,
         fetchMemosUseCase: FetchMemosUseCase? = nil,
-        memoViewModelFactory: ((CountdownEvent) -> CorkBoardViewModel)? = nil
+        saveMemoUseCase: SaveMemoUseCase? = nil
     ) {
         self.fetchEventsUseCase = fetchEventsUseCase
         self.addEventUseCase = addEventUseCase
         self.updateEventUseCase = updateEventUseCase
         self.deleteEventUseCase = deleteEventUseCase
         self.fetchMemosUseCase = fetchMemosUseCase
-        self.memoViewModelFactory = memoViewModelFactory
+        self.saveMemoUseCase = saveMemoUseCase
     }
 
     func startTimer() {
@@ -107,6 +106,17 @@ final class CountdownPageViewModel {
         } catch {
             print("Failed to delete event: \(error)")
         }
+    }
+
+    func startEditingMemo(event: CountdownEvent) {
+        editingMemoEvent = event
+    }
+
+    func saveMemo(body: String) {
+        guard let event = editingMemoEvent else { return }
+        try? saveMemoUseCase?.execute(eventId: event.id, body: body)
+        editingMemoEvent = nil
+        loadLatestMemos()
     }
 
     private func clampPageIndex() {

@@ -25,6 +25,15 @@ final class MemoRepository: MemoRepositoryProtocol {
         try modelContext.save()
     }
 
+    func update(_ memo: Memo) throws {
+        let targetId = memo.id
+        let predicate = #Predicate<MemoModel> { $0.id == targetId }
+        let descriptor = FetchDescriptor(predicate: predicate)
+        guard let model = try modelContext.fetch(descriptor).first else { return }
+        MemoMapper.update(model, from: memo)
+        try modelContext.save()
+    }
+
     func delete(id: UUID) throws {
         let targetId = id
         let predicate = #Predicate<MemoModel> { $0.id == targetId }

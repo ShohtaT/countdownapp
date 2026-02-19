@@ -18,4 +18,8 @@ enum MemoMapper {
             createdAt: entity.createdAt
         )
     }
+
+    static func update(_ model: MemoModel, from entity: Memo) {
+        model.body = entity.body
+    }
 }

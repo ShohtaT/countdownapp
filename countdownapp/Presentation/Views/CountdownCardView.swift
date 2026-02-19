@@ -8,7 +8,7 @@ struct CountdownCardView: View {
     var onMemo: () -> Void
     var onDelete: () -> Void
 
-    private static let defaultMessages = [
+    static let defaultMessages = [
         "今日もお疲れ様！\n明日も頑張ってね🍵",
         "最近頑張ってるね！\n無理せずにね💪",
         "あなたのペースで\n大丈夫だよ🌱",
@@ -19,12 +19,16 @@ struct CountdownCardView: View {
         "休むのも\n大事な努力だよ☕",
     ]
 
+    static func defaultMessage(for event: CountdownEvent) -> String {
+        let index = abs(event.id.hashValue) % defaultMessages.count
+        return defaultMessages[index]
+    }
+
     private var displayText: String {
         if let memo = pinnedMemo {
             return memo.body
         }
-        let index = abs(event.id.hashValue) % Self.defaultMessages.count
-        return Self.defaultMessages[index]
+        return Self.defaultMessage(for: event)
     }
 
     private var timeRemaining: TimeRemaining {
@@ -85,13 +89,6 @@ struct CountdownCardView: View {
             HStack(spacing: 16) {
                 Button(action: onEdit) {
                     Image(systemName: "pencil")
-                        .font(.title3)
-                        .frame(width: 44, height: 44)
-                }
-                .buttonStyle(.bordered)
-
-                Button(action: onMemo) {
-                    Image(systemName: "note.text")
                         .font(.title3)
                         .frame(width: 44, height: 44)
                 }
